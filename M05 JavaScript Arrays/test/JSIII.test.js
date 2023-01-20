@@ -24,14 +24,14 @@ const {
 } = require('../homework');
 
 describe('JAVASCRIPT III', function () {
-   xdescribe('devolverPrimerElemento(array)', function () {
+   describe('devolverPrimerElemento(array)', function () {
       it('Debe retornar el primer elemento del arreglo', function () {
          expect(devolverPrimerElemento([10, 10, 16, 12])).toBe(10);
          expect(devolverPrimerElemento([97, 100, 80, 55, 72, 94])).toBe(97);
       });
    });
 
-   xdescribe('devolverUltimoElemento(array)', function () {
+   describe('devolverUltimoElemento(array)', function () {
       it('Debe retornar el último elemento del arreglo', function () {
          expect(devolverUltimoElemento([10, 10, 16, 12])).toBe(12);
          expect(devolverUltimoElemento([97, 100, 80, 55, 72, 94])).toBe(94);
@@ -48,7 +48,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   xdescribe('obtenerLargoDelArray(array)', function () {
+   describe('obtenerLargoDelArray(array)', function () {
       it('Debe retornar la longitud del arreglo', function () {
          expect(obtenerLargoDelArray([10, 10, 16, 12])).toBe(4);
          expect(obtenerLargoDelArray([97, 100, 80, 55, 72, 94])).toBe(6);
@@ -58,7 +58,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   xdescribe('incrementarPorUno(array)', function () {
+   describe('incrementarPorUno(array)', function () {
       it('Debe retornar el arreglo con cada elemento aumentado en +1', function () {
          expect(incrementarPorUno([10, 10, 16, 12])).toEqual([11, 11, 17, 13]);
          expect(incrementarPorUno([97, 100, 80, 55, 72, 94])).toEqual([
