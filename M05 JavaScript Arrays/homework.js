@@ -206,7 +206,7 @@ function continueStatement(num) {
          valor = valor + 2;
          arreglo.push(valor);
       }
-   }
+   }emos
    return arreglo;
 }
 
