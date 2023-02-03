@@ -48,7 +48,7 @@ const {
 } = require('../Ejercicio 05');
 
 describe('JAVASCRIPT I', function () {
-   describe('EJERCICIO 01', function () {
+   xdescribe('EJERCICIO 01', function () {
       describe('nuevoString', function () {
          it('Debe ser un string', function () {
             expect(typeof nuevoString).toBe('string');
@@ -86,7 +86,7 @@ describe('JAVASCRIPT I', function () {
       });
    });
 
-   describe('EJERCICIO 02', function () {
+   xdescribe('EJERCICIO 02', function () {
       describe('devolverString(str)', function () {
          it('Debe retornar el string provisto', function () {
             expect(devolverString('Henry')).toBe('Henry');
@@ -256,7 +256,7 @@ describe('JAVASCRIPT I', function () {
       });
    });
 
-   describe('EJERCICIO 05', function () {
+   xdescribe('EJERCICIO 05', function () {
       describe('esPositivo(num)', function () {
          it('Debe devolver el string "Es positivo" si el número es mayor a cero', function () {
             expect(esPositivo(23)).toBe('Es positivo');

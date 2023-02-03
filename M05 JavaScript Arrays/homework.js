@@ -84,33 +84,34 @@ function diaDeLaSemana(numeroDeDia) {
    // Tu código:
 }
 
+
+
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar True si el entero inicia con 9 y False en otro caso.
    // Tu código:
-   //[1,2,3,4]
-   //arreglo[1]
-
-   //"950"
-   //
+   //95150
+   //"95150"
    let texto = num.toString();
-   
    let primerValor = texto.charAt(0);
-   if( primerValor === '9') return true;
+   if(primerValor === '9'){
+      return true;
+   }
    return false;
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar True.
    // Caso contrario retornar False.
-   // Tu código:
+   // Tu código: 
+   //[20, 20, 20, 40]
    let comparar = array[0];
-   for(let i=1; i < array.length; i++) {
-      if(array[i] !== comparar){
+   for(let i=1; i< array.length; i++) {
+      if(array[i] !== comparar) {
          return false;
       }
    }
-   return true;   
+   return true;
 }
 
 function mesesDelAño(array) {
@@ -118,46 +119,65 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   let nuevoArray = [];
-   for(let i=0; i<array.length; i++) {
-      if(array[i] === 'Enero'){
-         nuevoArray.push(array[i]);
+   //   0            1        2         3       4         5             6        7      8
+   //["Marzo", "Diciembre", "Abril", "Junio", "Julio", "Noviembre", "Enero", "Mayo", "Febrero"]
+   //nuevoArray= ["Marzo", "Noviembre", "Enero"]
+   let nuevoArray = []
+   for (let i = 0; i < array.length; i++){
+      if(array [i]=== 'Enero'){
+         nuevoArray.push(array[i])
       }
-      else if(array[i] === 'Marzo'){
-         nuevoArray.push(array[i]);
+      else if(array[i]=== 'Noviembre'){
+         nuevoArray.push(array[i])
       }
-      else if(array[i] === 'Noviembre'){
-         nuevoArray.push(array[i]);
+      else if(array[i]=== 'Marzo'){
+         nuevoArray.push(array[i])
       }
    }
-   if(nuevoArray.length !== 3){
-      return "No se encontraron los meses pedidos";
+   if (nuevoArray.length !== 3){
+      return 'No se encontraron los meses pedidos'
    }
-   return nuevoArray;
+   return nuevoArray
+
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-   let arrayTableDelSeis = [];
-   for(let i=0; i <= 10; i++){
-      arrayTableDelSeis.push(6 * i);
+   //[0, 6, 12, 18, 24 , 30 ..., 60]
+   // let tabla = [];
+   // for (let i = 0; i < 11; i++) {
+   //    tabla.push(i * 6);
+   // }
+
+   // return tabla
+   let m = 6
+   let nuevo = []
+   for (let i = 0; i <= 10; i++) {
+      let r = i * m
+      nuevo.push(r)
    }
-   return arrayTableDelSeis;
+   return nuevo;
+
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-   let mayores = [];
-   for(let i=0; i<array.length; i++) {
-      if(array[i] > 100){
+   let mayores = []
+   for(let i = 0; i < array.length;i++) {
+      if (array[i] > 100){
          mayores.push(array[i]);
       }
    }
-   return mayores;
+   return mayores
+
+   // let mayor = array.filter(dato => dato > 100);
+   // return mayor;
+
+
 }
 
 /* ----------------------------------------------------------------------------------
@@ -171,22 +191,22 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-   let arreglo = [];
-   let valor = num;
-   for(let i = 0; i < 10 ; i++) {
-      valor = valor + 2;
-      if(valor === i){
-         break;
-      }
-      else{
-         arreglo.push(valor);
+   let arr = [];
+   for (let i = 0; i < 10; i++) {
+      num = num + 2;
+      if (num === i) {
+         break
+      } else {
+         arr.push(num);
       }
    }
-   if(arreglo.length < 10){
-      return "Se interrumpió la ejecución";
-   }else{
-      return arreglo;
+
+   if (arr.length < 10) {
+      return 'Se interrumpió la ejecución'
+   } else {
+      return arr
    }
+
 }
 
 function continueStatement(num) {
@@ -196,18 +216,18 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
-   let arreglo = [];
-   let valor = num;
+   let nuevoArray = [];
    for(let i=0; i<10; i++){
-      if(i+1 === 5){
+      if(i===5){
          continue;
       }
       else{
-         valor = valor + 2;
-         arreglo.push(valor);
+         num = num + 2;
+         nuevoArray.push(num)
       }
-   }emos
-   return arreglo;
+   }
+   return nuevoArray;
+   
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
