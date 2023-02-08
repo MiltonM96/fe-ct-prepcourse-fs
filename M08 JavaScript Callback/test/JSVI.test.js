@@ -10,14 +10,14 @@ const {
 } = require('../homework');
 
 describe('JAVASCRIPT VI', function () {
-   xdescribe('mayuscula(nombre)', function () {
+   describe('mayuscula(nombre)', function () {
       it('Debe retornar el mismo nombre, pero con la primera letra en mayúscula', function () {
          expect(mayuscula('mario')).toBe('Mario');
          expect(mayuscula('ana')).toBe('Ana');
       });
    });
 
-   xdescribe('invocarCallback(cb)', function () {
+   describe('invocarCallback(cb)', function () {
       it('Debe invocar/ejecutar el callback', function () {
          const cb = jest.fn();
          invocarCallback(cb);
@@ -25,7 +25,7 @@ describe('JAVASCRIPT VI', function () {
       });
    });
 
-   xdescribe('operacionMatematica(n1, n2, cb)', function () {
+   describe('operacionMatematica(n1, n2, cb)', function () {
       it('Debe retornar el resultado del callback habiéndole pasado como arguemnto los números recibidos.', function () {
          const cb = jest.fn();
          operacionMatematica(100, 20, cb);
@@ -33,7 +33,7 @@ describe('JAVASCRIPT VI', function () {
       });
    });
 
-   xdescribe('sumarArray(arrayOfNumbers, cb)', function () {
+   describe('sumarArray(arrayOfNumbers, cb)', function () {
       it('Debe sumar todos los números del arreglo y pasarle el resultado como argumento al callback.', function (done) {
          sumarArray([1, 2, 3, 4, 5], function (sum) {
             expect(sum).toBe(15);
@@ -42,7 +42,7 @@ describe('JAVASCRIPT VI', function () {
       });
    });
 
-   xdescribe('forEach(array, cb)', function () {
+   describe('forEach(array, cb)', function () {
       it('Debe pasarle como argumento cada elemento del arreglo al callback', function () {
          const nums = [];
          forEach([1, 2, 3, 4, 5], function (num) {
